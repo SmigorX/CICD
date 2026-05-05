@@ -42,6 +42,7 @@ def divide(a: int, b: int) -> float:
     """
     return a / b
 
+
 def convert(a: int) -> str:
     """
     Converts to binary representation (0–100, natural numbers only)

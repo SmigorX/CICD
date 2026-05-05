@@ -31,17 +31,19 @@ def test_divide(a, b, expected):
     result = utils.divide(a, b)
     assert result == expected
 
+
 @pytest.mark.parametrize("value", [0, 1, 2, 10, 100])
 def test_conversion(value):
     assert utils.convert(value) == bin(value)[2:]
+
 
 @pytest.mark.parametrize("value", [-1, 101])
 def test_out_of_range(value):
     with pytest.raises(ValueError):
         utils.convert(value)
 
+
 @pytest.mark.parametrize("value", [1.5, 2.7, -3.3])
 def test_not_natural(value):
     with pytest.raises(TypeError):
         utils.convert(value)
-
